@@ -1,0 +1,16 @@
+{
+  "name": "bachat-bhai",
+  "owner": {
+    "name": "Ami and Karan"
+  },
+  "metadata": {
+    "description": "Bachat Bhai: free grocery cart comparison for Zepto, Instamart, Blinkit and Flipkart Minutes."
+  },
+  "plugins": [
+    {
+      "name": "bachat-bhai",
+      "source": "./",
+      "description": "Compare one grocery cart across Indian quick-commerce apps using real bills."
+    }
+  ]
+}

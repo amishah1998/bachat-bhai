@@ -1,0 +1,10 @@
+{
+  "name": "bachat-bhai",
+  "version": "1.0.0",
+  "description": "Compare one grocery cart across Zepto, Swiggy Instamart, Blinkit and Flipkart Minutes using real bills, then fill the cheapest cart. Never orders without your yes.",
+  "author": {
+    "name": "Ami and Karan"
+  },
+  "license": "MIT",
+  "keywords": ["groceries", "india", "zepto", "instamart", "blinkit", "flipkart-minutes", "price-comparison"]
+}

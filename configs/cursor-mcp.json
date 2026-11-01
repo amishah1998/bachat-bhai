@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "zepto": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.zepto.co.in/mcp"]
+    },
+    "swiggy-instamart": {
+      "url": "https://mcp.swiggy.com/im"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    }
+  }
+}
