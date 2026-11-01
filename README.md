@@ -11,7 +11,7 @@ Works in Claude Desktop, Claude Code, Cursor, VS Code, ChatGPT (limited) and any
 | File | What it's for |
 |---|---|
 | `skills/bachat-bhai/SKILL.md` | The instructions, as an Agent Skill (Claude, Claude Code, Cursor, other skill-aware apps) |
-| `dist/bachat-bhai-skill.zip` | The same skill zipped, ready to upload in Claude |
+| [`dist/bachat-bhai-skill.zip`](https://github.com/amishah1998/bachat-bhai/raw/main/dist/bachat-bhai-skill.zip) | The same skill zipped, ready to upload in Claude ([one-click download](https://github.com/amishah1998/bachat-bhai/raw/main/dist/bachat-bhai-skill.zip)) |
 | `AGENTS.md` | The same instructions without skill frontmatter, for apps that read AGENTS.md or a system-prompt file |
 | `system-prompt.md` | A short version (<1,500 characters) for small instruction boxes, like ChatGPT |
 | `configs/claude_desktop_config.json` | MCP servers for Claude Desktop |
@@ -45,7 +45,7 @@ Both connectors sign you in with **your phone number and OTP** on Zepto's or Swi
 2. In Claude Desktop, open **Settings → Developer → Edit Config**. This opens `claude_desktop_config.json` (macOS: `~/Library/Application Support/Claude/`, Windows: `%APPDATA%\Claude\`).
 3. Paste the `mcpServers` block from [`configs/claude_desktop_config.json`](configs/claude_desktop_config.json). If the file already has an `mcpServers` block, add the three entries inside it. Save, then **quit and reopen** Claude.
 4. A browser tab opens for Zepto and one for Swiggy. Log in with your phone number and OTP.
-5. Add the skill: **Settings → Capabilities**, turn on **Code execution and file creation**. Then **Customize → Skills → + → Upload a skill**, and choose `dist/bachat-bhai-skill.zip`.
+5. Add the skill: **Settings → Capabilities**, turn on **Code execution and file creation**. Then **Customize → Skills → + → Upload a skill**, and choose the zip you get from **[⬇ Download bachat-bhai-skill.zip](https://github.com/amishah1998/bachat-bhai/raw/main/dist/bachat-bhai-skill.zip)**. Don't unzip it.
    No skills option? Create a **Project** and paste `AGENTS.md` into its instructions.
 6. Say: "Bachat Bhai, compare: tomato, onion, paneer, atta".
 
@@ -56,7 +56,7 @@ Both connectors sign you in with **your phone number and OTP** on Zepto's or Swi
 Either install the pack as a plugin (skill and all three servers in one go):
 
 ```bash
-claude plugin marketplace add ./bachat-bhai-pack
+claude plugin marketplace add amishah1998/bachat-bhai
 claude plugin install bachat-bhai@bachat-bhai
 ```
 
@@ -66,10 +66,11 @@ claude plugin install bachat-bhai@bachat-bhai
 claude mcp add --transport http --scope user zepto https://mcp.zepto.co.in/mcp
 claude mcp add --transport http --scope user swiggy-instamart https://mcp.swiggy.com/im
 claude mcp add --scope user playwright -- npx -y @playwright/mcp@latest
+git clone https://github.com/amishah1998/bachat-bhai && cd bachat-bhai
 mkdir -p ~/.claude/skills && cp -r skills/bachat-bhai ~/.claude/skills/
 ```
 
-Then start `claude`, run `/mcp`, and pick **Authenticate** for zepto and swiggy-instamart (phone + OTP in your browser). For a one-off session without installing anything: `claude --plugin-dir ./bachat-bhai-pack`.
+Then start `claude`, run `/mcp`, and pick **Authenticate** for zepto and swiggy-instamart (phone + OTP in your browser). For a one-off session without installing anything: `claude --plugin-dir ./bachat-bhai` from the folder you cloned.
 
 ### Cursor
 
