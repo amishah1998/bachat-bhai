@@ -10,7 +10,7 @@ SRC=skills/bachat-bhai/SKILL.md
   echo "<!-- Bachat Bhai instructions for apps that read AGENTS.md or a system prompt file. Created by Ami and Karan. MIT License. -->"
   echo
   # strip YAML frontmatter (first block between --- lines)
-  awk 'BEGIN{f=0} NR==1&&/^---$/{f=1;next} f==1&&/^---$/{f=2;next} f!=1{print}' "$SRC" | sed '1{/^$/d}'
+  awk 'BEGIN{f=0} NR==1&&/^---$/{f=1;next} f==1&&/^---$/{f=2;next} f!=1{print}' "$SRC" | sed '1{/^$/d;}'
 } > AGENTS.md
 
 mkdir -p dist
