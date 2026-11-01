@@ -70,7 +70,7 @@ git clone https://github.com/amishah1998/bachat-bhai && cd bachat-bhai
 mkdir -p ~/.claude/skills && cp -r skills/bachat-bhai ~/.claude/skills/
 ```
 
-Then start `claude`, run `/mcp`, and pick **Authenticate** for zepto and swiggy-instamart (phone + OTP in your browser). For a one-off session without installing anything: `claude --plugin-dir ./bachat-bhai` from the folder you cloned.
+Then start `claude`, run `/mcp`, and pick **Authenticate** for zepto and swiggy-instamart (phone + OTP in your browser). For a one-off session without installing anything, run `claude --plugin-dir .` inside your clone of this repo.
 
 ### Cursor
 
